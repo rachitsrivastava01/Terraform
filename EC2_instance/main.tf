@@ -18,3 +18,7 @@ tags = {
    Name = "My first terraform instance"
   }
 }
+resource "aws_key_pair" "deployer" {
+  key_name   = "my-terraform-key"
+  public_key = file("C:/Users/Rachit/.ssh/id_rsa.pub")
+}
